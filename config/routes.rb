@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "about/index"
   root to: "home#index"
   resources :tracks, only: [ :index, :show ]
   resources :artists, only: [ :index, :show ]
