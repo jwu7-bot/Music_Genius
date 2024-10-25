@@ -1,2 +1,44 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<section class="hero is-small is-warning">
+  <div class="hero-body has-text-centered">
+    <p class="title has-text-weight-semibold">Welcome to Music Genius!</p>
+    <p class="subtitle">Explore your favorite artists, genres, and tracks.</p>
+  </div>
+</section>
+
+<nav class="box has-background-primary-dark level mt-5">
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Tracks</p>
+      <p class="title"><%= Track.count %></p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Artists</p>
+      <p class="title"><%= Artist.count %></p>
+    </div>
+  </div>
+  <div class="level-item has-text-centered">
+    <div>
+      <p class="heading">Genres</p>
+      <p class="title"><%= Genre.count %></p>
+    </div>
+  </div>
+</nav>
+
+<div class="columns is-multiline is-centered">
+  <% @genres.each do |genre| %>
+    <div class="column is-one-third">
+      <div class="box has-text-centered">
+        <h2 class="title is-4"><%= genre.name %></h2>
+          <ul class="track-list">
+          <% genre.tracks.limit(10).each do |track| %>
+            <li class="track-item">
+              <strong><%= link_to track.name, track %></strong> by <%= link_to track.artist.name, track.artist %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>

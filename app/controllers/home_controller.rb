@@ -4,6 +4,6 @@ class HomeController < ApplicationController
 
     @artists = Artist.all.limit(10)
 
-    @genres = Genre.all
+    @genres = Genre.includes(tracks: :artist).all
   end
 end
