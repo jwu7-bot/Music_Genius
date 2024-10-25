@@ -1,2 +1,22 @@
-<h1>Tracks#show</h1>
-<p>Find me in app/views/tracks/show.html.erb</p>
+<% content_for(:title) { @track.name } %>
+
+<section class="hero box has-background-danger-dark">
+  <div class="hero-body">
+    <h2 class="title is-3"><%= @track.name %></h2>
+
+    <p>
+      <strong>Duration: </strong>
+      <%= @track.duration %> in Minutes
+    </p>
+
+    <p>
+      <strong>Genre: </strong>
+      <%= link_to @track.genre.name, @track.genre %>
+    </p>
+
+    <p>
+      <strong>Artist: </strong>
+      <%= link_to @track.artist.name, @track.artist %>
+    </p>
+  </div>
+</section>
