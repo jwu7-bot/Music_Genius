@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "home/index"
   resources :tracks, only: [ :index, :show ]
   resources :artists, only: [ :index, :show ]
   resources :genres, only: [ :index, :show ]
