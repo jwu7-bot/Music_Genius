@@ -17,7 +17,25 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
+    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <div class="navbar-start">
+      <a class="navbar-item" href="<%= root_path %>">
+        Home
+      </a>
+      <a class="navbar-item" href="<%= tracks_path %>">
+        Tracks
+      </a>
+      <a class="navbar-item" href="<%= artists_path %>">
+        Artists
+      </a>
+      <a class="navbar-item" href="<%= genres_path %>">
+        Genres
+      </a>
+      <a class="navbar-item">
+        About
+      </a>
+    <div class="navbar-end">
+  </nav>
   <section class="section">
     <div class="container">
       <body>
