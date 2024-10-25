@@ -1,2 +1,24 @@
-<h1>Genres#show</h1>
-<p>Find me in app/views/genres/show.html.erb</p>
+<% content_for(:title) { @genre.name } %>
+
+<section class="hero is-warning">
+  <div class="hero-body">
+    <p class="title"><%= @genre.name %></p>
+    <p class="subtitle">Tracks in <%= @genre.name %> (alphabetical order):</p>
+  </div>
+</section>
+
+<div class="mt-6 mb-6">
+  <%= will_paginate @tracks %>
+</div>
+
+<ol class="mt-5">
+  <% @tracks.each do |track| %>
+  <div class="box has-background-danger-dark">
+    <%= link_to track.name, track %>
+  </div>
+  <% end %>
+</ol>
+
+<div class="mt-6 mb-6">
+  <%= will_paginate @tracks %>
+</div>

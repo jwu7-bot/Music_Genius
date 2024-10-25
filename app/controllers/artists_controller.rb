@@ -7,5 +7,6 @@ class ArtistsController < ApplicationController
   def show
     # fecth individual artists
     @artist = Artist.find(params[:id])
+    @tracks = @artist.tracks.order(:name)
   end
 end

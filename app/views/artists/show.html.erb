@@ -1,18 +1,16 @@
 <% content_for(:title) { @artist.name } %>
 
-<section class="hero box has-background-dark">
+<section class="hero is-warning">
   <div class="hero-body">
-    <p class="title is-warning"><%= @artist.name %></p>
-
-    <h3 class="title is-5">Tracks made by <%= @artist.name %>:</h3>
-    <div class="content">
-      <ul>
-        <% @artist.tracks.each do |track| %>
-          <li>
-            <%= link_to track.name, track %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
+    <p class="title"><%= @artist.name %></p>
+    <p class="subtitle">Tracks made by <%= @artist.name %> (alphabetical order):</p>
   </div>
 </section>
+
+<ol class="mt-5">
+  <% @tracks.each do |track| %>
+  <div class="box has-background-danger-dark">
+    <%= link_to track.name, track %>
+  </div>
+  <% end %>
+</ol>
