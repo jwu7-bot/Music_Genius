@@ -1,2 +1,18 @@
-<h1>Artists#show</h1>
-<p>Find me in app/views/artists/show.html.erb</p>
+<% content_for(:title) { @artist.name } %>
+
+<section class="hero box has-background-dark">
+  <div class="hero-body">
+    <p class="title is-warning"><%= @artist.name %></p>
+
+    <h3 class="title is-5">Tracks made by <%= @artist.name %>:</h3>
+    <div class="content">
+      <ul>
+        <% @artist.tracks.each do |track| %>
+          <li>
+            <%= link_to track.name, track %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>
