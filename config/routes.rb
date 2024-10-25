@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get "about/index"
   root to: "home#index"
   resources :tracks, only: [ :index, :show ]
   resources :artists, only: [ :index, :show ]
   resources :genres, only: [ :index, :show ]
+  get "about", to: "about#index"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
