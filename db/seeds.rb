@@ -1,6 +1,7 @@
 require "open-uri"
 require "json"
 require "faker"
+require "dotenv/load"
 
 Track.delete_all
 Genre.delete_all
