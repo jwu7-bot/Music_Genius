@@ -1,2 +1,14 @@
-<h1>Genres#index</h1>
-<p>Find me in app/views/genres/index.html.erb</p>
+<section class="hero is-warning">
+  <div class="hero-body">
+    <p class="title">Genres</p>
+    <p class="subtitle">A list of random genres from Faker</p>
+  </div>
+</section>
+
+<ol class="mt-5">
+  <% @genres.each do |genre| %>
+  <div class="box has-background-danger-dark">
+    <%= link_to genre.name, genre %>
+  </div>
+  <% end %>
+</ol>
