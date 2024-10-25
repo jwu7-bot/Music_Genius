@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  get "tracks/index"
-  get "tracks/show"
-  get "genres/index"
-  get "genres/show"
-  get "artists/index"
-  get "artists/show"
+  resources :tracks, only: [ :index, :show ]
+  resources :artists, only: [ :index, :show ]
+  resources :genres, only: [ :index, :show ]
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
