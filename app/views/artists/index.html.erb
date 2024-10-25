@@ -1,2 +1,21 @@
-<h1>Artists#index</h1>
-<p>Find me in app/views/artists/index.html.erb</p>
+<section class="hero is-warning">
+  <div class="hero-body">
+    <p class="title">Artists</p>
+  </div>
+</section>
+
+<div class="mt-6 mb-6">
+  <%= will_paginate @artists %>
+</div>
+
+<ol>
+  <% @artists.each do |artist| %>
+  <div class="box has-background-danger-dark">
+    <%= link_to artist.name, artist %>
+  </div>
+  <% end %>
+</ol>
+
+<div class="mt-6">
+  <%= will_paginate @artists %>
+</div>
