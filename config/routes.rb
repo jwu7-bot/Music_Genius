@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
   root to: "home#index"
-  resources :tracks, only: [ :index, :show ]
+
+  resources :tracks, only: [ :index, :show ] do
+    collection do
+      get "search"
+    end
+  end
   resources :artists, only: [ :index, :show ]
+
   resources :genres, only: [ :index, :show ]
+
   get "about", to: "about#index"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

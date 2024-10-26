@@ -12,11 +12,11 @@ class TracksController < ApplicationController
   def search
     if params[:query].present?
       @tracks = Track.joins(:artist, :genres)
-                      .where("track.name LIKE ? OR artist.name LIKE ? OR genres.name LIKE?",
+                     .where("tracks.name LIKE ? OR artists.name LIKE ? OR genres.name LIKE ?",
                             "%#{params[:query]}%", "%#{params[:query]}%", "%#{params[:query]}%")
-                        .distinct
+                     .distinct.order(:name).paginate(page: params[:page], per_page: 25)
     else
-      @tracks = Track.all
+      @tracks = Track.all.order(:name).paginate(page: params[:page], per_page: 25)
     end
   end
 end
