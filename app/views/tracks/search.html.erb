@@ -1,0 +1,17 @@
+<div class="section">
+  <div class="container">
+    <h1 class="title">Search Results</h1>
+      <% if @tracks.any? %>
+        <ul>
+          <% @tracks.each do |track| %>
+          <li>
+            <strong>Track:</strong> <%= link_to track.name, track_path(track) %> -
+            <strong>Artist:</strong> <%= link_to track.artist.name, artist_path(track.artist) %>
+          </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>No results found for "<%= params[:query] %>"</p>
+      <% end %>
+  </div>
+</div>
