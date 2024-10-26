@@ -10,13 +10,15 @@
     </p>
 
     <p>
-      <strong>Genre: </strong>
-      <%= link_to @track.genre.name, @track.genre %>
+      <strong>Artist: </strong>
+      <%= link_to @track.artist.name, @track.artist %>
     </p>
 
     <p>
-      <strong>Artist: </strong>
-      <%= link_to @track.artist.name, @track.artist %>
+      <strong>Genre: </strong>
+        <% @track.genres.each do |genre| %>
+          <%= link_to genre.name, genre_path(genre) %>
+        <% end %>
     </p>
   </div>
 </section>
