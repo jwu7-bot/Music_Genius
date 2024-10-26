@@ -1,19 +1,19 @@
 <div class="section">
-  <div class="container">
+  <div class="container box">
     <h1 class="title has-text-centered">About the Project</h1>
 
     <div class="content">
       <p>
         The <strong>Music Genius</strong> is designed to provide music enthusiasts with an intuitive,
         engaging platform to explore and discover music across various genres.
-        The project integrates with the <strong>Last.fm API</strong> to fetch and display tracks.
+        The project integrates with the <strong>Last.fm API</strong> to fetch and display tracks, artists and genres.
         Built using <strong>Ruby on Rails</strong> for the backend, with a <strong>SQLite database</strong>
         to manage artists, genres, and tracks, and styled with <strong>Bulma CSS</strong>, this application
         merges robust functionality with a clean, user-friendly design.
       </p>
     </div>
 
-    <figure class="image is-200x200">
+    <figure class="image">
       <%= image_tag "project_erd.png" %>
     </figure>
 
@@ -21,34 +21,29 @@
     <div class="columns is-multiline">
       <div class="column is-half">
         <div class="box">
-          <h3 class="subtitle">Discover Music by Genre</h3>
-          <p>Users can explore popular tracks across a wide range of genres.</p>
+          <h3 class="subtitle has-text-centered">Discover Music by Genre</h3>
+          <p class="has-text-centered">Users can explore popular tracks across a wide range of genres.</p>
         </div>
       </div>
 
       <div class="column is-half">
         <div class="box">
-          <h3 class="subtitle">Artist and Track Details</h3>
-          <p>Each track includes detailed information about its artist and associated genres. Users can explore individual artist pages and check their songs.</p>
+          <h3 class="subtitle has-text-centered">Track Details</h3>
+          <p class="has-text-centered">Each track includes information about duration, artist and associated genres. Users can explore individual tracks, artist and genre.</p>
         </div>
       </div>
 
       <div class="column is-half">
         <div class="box">
-          <h3 class="subtitle">Responsive and Modern UI</h3>
-          <p>The application is built with Bulma, providing a visually appealing, responsive layout.</p>
+          <h2 class="subtitle has-text-centered">Serach for tracks, artists, and genres</h2>
+          <p class="has-text-centered">Users can search for difeerent tracks, artits and genres from the database.</p>
         </div>
       </div>
 
       <div class="column is-half">
         <div class="box">
-          <h2 class="subtitle has-text-centered">Technology Stack</h2>
-          <ul>
-            <li><strong>Backend:</strong> Ruby on Rails</li>
-            <li><strong>Database:</strong> SQLite</li>
-            <li><strong>API Integration:</strong> Last.fm API</li>
-            <li><strong>Frontend:</strong> Bulma CSS</li>
-          </ul>
+          <h3 class="subtitle has-text-centered">Responsive and Modern UI</h3>
+          <p class="has-text-centered">The application is built with Bulma, providing a visually appealing, responsive layout.</p>
         </div>
       </div>
     </div>
