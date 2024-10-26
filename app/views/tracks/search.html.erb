@@ -1,0 +1,26 @@
+<section class="hero is-warning">
+  <div class="hero-body">
+    <p class="title">Search results</p>
+    <p class="subtitle">Found <%= @tracks.count %> results (alphabetical order): </p>
+  </div>
+</section>
+
+<div class="mt-6 mb-6">
+  <%= will_paginate @tracks %>
+</div>
+
+<ol>
+  <% if @tracks.any? %>
+    <% @tracks.each do |track|%>
+      <div class="box has-background-danger-dark">
+          <strong>Track: </strong> <%= link_to track.name, track_path(track) %> <br>
+          <strong>Artist: </strong> <%= link_to track.artist.name, artist_path(track.artist) %> <br>
+          <strong>Genres: </strong> <%= track.genres.map { |genre| link_to genre.name, genre_path(genre) }.join(', ').html_safe %>
+      </div>
+    <% end %>
+  <% end %>
+</ol>
+
+<div class="mt-6">
+  <%= will_paginate @tracks %>
+</div>

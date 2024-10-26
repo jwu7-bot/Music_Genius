@@ -1,15 +1,51 @@
-<section class="hero box is-warning">
-  <div class="hero-body">
-    <p class="title">About Our Project</p>
-    <p>
-      Welcome to our <strong class="has-text-link">Music Discovery Application</strong>! <br>
-      This project aims to bring music lovers closer to the genres and artists they enjoy,helping them explore a wide range of musical styles and discover new favorites. <br>
-      Our platform is powered by the <strong class="has-text-link">Last.fm API</strong>, enabling us to provide up-to-date information about popular artists, and diverse music genres from around the world. <br>
-      There’s something here for everyone. <br>
-      With our Music Discovery Application, you can explore top artists and tracks, dive deep into different genres, and enjoy a tailored experience that celebrates the universal language of music. <br>
-      We believe that music has the power to connect people, inspire creativity, and elevate moods. <br>
-      Our goal is to make music exploration easy, enjoyable, and personalized. <br>
-      Thank you for visiting, and we hope you have a great time exploring the world of music with us!
-    </p>
+<div class="section">
+  <div class="container box">
+    <h1 class="title has-text-centered">About the Project</h1>
+
+    <div class="content">
+      <p>
+        The <strong>Music Genius</strong> is designed to provide music enthusiasts with an intuitive,
+        engaging platform to explore and discover music across various genres.
+        The project integrates with the <strong>Last.fm API</strong> to fetch and display tracks, artists and genres.
+        Built using <strong>Ruby on Rails</strong> for the backend, with a <strong>SQLite database</strong>
+        to manage artists, genres, and tracks, and styled with <strong>Bulma CSS</strong>, this application
+        merges robust functionality with a clean, user-friendly design.
+      </p>
+    </div>
+
+    <figure class="image">
+      <%= image_tag "project_erd.png" %>
+    </figure>
+
+    <h2 class="subtitle has-text-centered mt-6">Key Features</h2>
+    <div class="columns is-multiline">
+      <div class="column is-half">
+        <div class="box">
+          <h3 class="subtitle has-text-centered">Discover Music by Genre</h3>
+          <p class="has-text-centered">Users can explore popular tracks across a wide range of genres.</p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="box">
+          <h3 class="subtitle has-text-centered">Track Details</h3>
+          <p class="has-text-centered">Each track includes information about duration, artist and associated genres. Users can explore individual tracks, artist and genre.</p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="box">
+          <h2 class="subtitle has-text-centered">Serach for tracks, artists, and genres</h2>
+          <p class="has-text-centered">Users can search for difeerent tracks, artits and genres from the database.</p>
+        </div>
+      </div>
+
+      <div class="column is-half">
+        <div class="box">
+          <h3 class="subtitle has-text-centered">Responsive and Modern UI</h3>
+          <p class="has-text-centered">The application is built with Bulma, providing a visually appealing, responsive layout.</p>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
+</div>

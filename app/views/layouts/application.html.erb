@@ -17,24 +17,31 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-    <nav class="navbar is-link" role="navigation" aria-label="main navigation">
-    <div class="navbar-start">
-      <a class="navbar-item" href="<%= root_path %>">
-        Home
-      </a>
-      <a class="navbar-item" href="<%= tracks_path %>">
-        Tracks
-      </a>
-      <a class="navbar-item" href="<%= artists_path %>">
-        Artists
-      </a>
-      <a class="navbar-item" href="<%= genres_path %>">
-        Genres
-      </a>
-      <a class="navbar-item" href="<%= about_path %>">
-        About
-      </a>
-    <div class="navbar-end">
+
+  <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="<%= root_path %>">Home</a>
+        <a class="navbar-item" href="<%= tracks_path %>">Tracks</a>
+        <a class="navbar-item" href="<%= artists_path %>">Artists</a>
+        <a class="navbar-item" href="<%= genres_path %>">Genres</a>
+        <a class="navbar-item" href="<%= about_path %>">About</a>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <%= form_with url: search_tracks_path, method: :get, local: true do %>
+          <div class="field has-addons">
+            <div class="control">
+              <input class="input" type="text" name="query" placeholder="Search tracks, artists or genre...">
+            </div>
+            <div class="control">
+              <button type="submit" class="button is-primary">Search</button>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </nav>
   <section class="section">
     <div class="container">
