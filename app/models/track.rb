@@ -1,5 +1,5 @@
 class Track < ApplicationRecord
-  has__many :genres # many to many relationship
+  has_many :genres # many to many relationship
   belongs_to :genres
   belongs_to :artist
 
