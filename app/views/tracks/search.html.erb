@@ -1,4 +1,4 @@
-<section class="hero is-warning">
+<section class="hero is-warning mt-5">
   <div class="hero-body">
     <p class="title">Search results</p>
     <p class="subtitle">Found <%= @tracks.count %> results (alphabetical order): </p>
@@ -9,7 +9,7 @@
   <%= will_paginate @tracks %>
 </div>
 
-<ol>
+<div class="mt-5">
   <% if @tracks.any? %>
     <% @tracks.each do |track|%>
       <div class="box has-background-danger-dark">
@@ -19,7 +19,7 @@
       </div>
     <% end %>
   <% end %>
-</ol>
+</div>
 
 <div class="mt-6">
   <%= will_paginate @tracks %>

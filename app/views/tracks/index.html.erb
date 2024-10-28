@@ -1,4 +1,4 @@
-<section class="hero is-warning">
+<section class="hero is-warning mt-5">
   <div class="hero-body">
     <p class="title">Tracks</p>
     <p class="subtitle">All tracks and artists (alphabetical order):</p>
@@ -9,13 +9,13 @@
   <%= will_paginate @tracks %>
 </div>
 
-<ol>
+<div class="mt-5">
   <% @tracks.each do |track|%>
   <div class="box has-background-danger-dark">
     <%= link_to track.name, track %> by <%= link_to track.artist.name, track.artist %>
   </div>
   <% end %>
-</ol>
+</div>
 
 <div class="mt-6">
   <%= will_paginate @tracks %>

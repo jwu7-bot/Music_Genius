@@ -1,16 +1,16 @@
 <% content_for(:title) { @artist.name } %>
 
-<section class="hero is-warning">
+<section class="hero is-warning mt-5">
   <div class="hero-body">
     <p class="title"><%= @artist.name %></p>
     <p class="subtitle">Tracks made by <%= @artist.name %> (alphabetical order):</p>
   </div>
 </section>
 
-<ol class="mt-5">
-  <% @tracks.each do |track| %>
+<div class="mt-5">
+<% @tracks.each do |track| %>
   <div class="box has-background-danger-dark">
     <%= link_to track.name, track %>
   </div>
-  <% end %>
-</ol>
+<% end %>
+</div>
