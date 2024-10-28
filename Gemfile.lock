@@ -111,7 +111,6 @@ GEM
       dotenv (= 3.1.4)
       railties (>= 6.1)
     drb (2.2.1)
-    error_highlight (0.6.0)
     erubi (1.13.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -297,7 +296,6 @@ DEPENDENCIES
   capybara
   debug
   dotenv-rails
-  error_highlight (>= 0.6.0)
   faker!
   importmap-rails
   jbuilder
