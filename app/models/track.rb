@@ -1,5 +1,6 @@
 class Track < ApplicationRecord
-  has_and_belongs_to_many :genres # many to many relationship
+  has__many :genres # many to many relationship
+  belongs_to :genres
   belongs_to :artist
 
   validates :name, presence: true, uniqueness: true
