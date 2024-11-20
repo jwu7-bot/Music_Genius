@@ -16,9 +16,41 @@ Music Genius is a Ruby on Rails application that allows users to explore a compr
   - `Track`: Represents a music track and includes references to both `Artist` and `Genre`.
   - `Genre`: Represents a genre category and its related tracks.
 
+## Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+- **Ruby** 
+- **Rails** 
+
 ## Setup Instructions
 
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/my-rails-project.git
+```
+
+### 2. Install project dependencies
+Navigate to the project directory and install all required gems:
+
+```bash
+cd my-rails-project
+bundle install
+```
+
+### 3. Migrate the database
+Run the following commands to set up the database and apply any migrations:
+
+```bash
+rails db:migrate   # Apply migrations
+rails db:seed
+```
+
+### 4. Run the Rails server
+Start the Rails development server:
+
+```bash
+rails server
+```
+
