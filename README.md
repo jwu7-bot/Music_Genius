@@ -35,7 +35,7 @@ git clone https://github.com/jwu7-bot/Music_Genius.git
 Navigate to the project directory and install all required gems:
 
 ```bash
-cd my-rails-project
+cd music_genius
 bundle install
 ```
 
@@ -43,7 +43,7 @@ bundle install
 Run the following commands to set up the database and apply any migrations:
 
 ```bash
-rails db:migrate   # Apply migrations
+rails db:migrate  
 rails db:seed
 ```
 
