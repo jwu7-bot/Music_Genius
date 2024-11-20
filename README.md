@@ -15,3 +15,10 @@ Music Genius is a Ruby on Rails application that allows users to explore a compr
   - `Artist`: Represents a music artist.
   - `Track`: Represents a music track and includes references to both `Artist` and `Genre`.
   - `Genre`: Represents a genre category and its related tracks.
+
+## Setup Instructions
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/my-rails-project.git
